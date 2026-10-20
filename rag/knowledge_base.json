@@ -1,0 +1,26 @@
+[
+  {
+    "title": "OOMKilled after traffic increase",
+    "symptoms": "Container restarted with OOMKilled after traffic increase",
+    "root_cause": "Memory limit may be too low or application memory usage increased",
+    "fix": "Review memory metrics and profile the application; adjust resources only after review"
+  },
+  {
+    "title": "ImagePullBackOff",
+    "symptoms": "Kubernetes pod cannot pull container image",
+    "root_cause": "Image tag, registry permissions, or image-pull secret may be incorrect",
+    "fix": "Verify image name/tag and registry access; do not expose registry credentials"
+  },
+  {
+    "title": "Dependency build failure",
+    "symptoms": "ModuleNotFoundError or npm ERR during CI build",
+    "root_cause": "Dependency absent, lockfile mismatch, or build environment drift",
+    "fix": "Reconcile manifests and lockfiles and run tests in a clean build environment"
+  },
+  {
+    "title": "Connection refused",
+    "symptoms": "Application cannot connect to a downstream service",
+    "root_cause": "Target service may be down or endpoint/port/network configuration may be wrong",
+    "fix": "Check service health, DNS, port, network policies, and recent changes"
+  }
+]
